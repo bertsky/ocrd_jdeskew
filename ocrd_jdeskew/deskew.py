@@ -2,6 +2,7 @@ from __future__ import absolute_import
 
 import json
 import os.path
+import numpy as np
 from pkg_resources import resource_string
 
 import click
@@ -96,7 +97,7 @@ class JDeskew(Processor):
     def _process_segment(self, segment, image, coords, where, page_id, file_id):
         LOG = getLogger('processor.JDeskew')
         angle0 = coords['angle'] # deskewing (w.r.t. top image) already applied to segment_image
-        angle = get_angle(np.array(image), angle_max=self.parameter['maxskew'])
+        angle = get_angle(np.array(image), angle_max=self.parameter.get('maxskew', None))
 
         # segment angle: PAGE orientation is defined clockwise,
         # whereas PIL/ndimage rotation is in mathematical direction:
