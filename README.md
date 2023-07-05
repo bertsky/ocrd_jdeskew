@@ -11,7 +11,7 @@
 
 ## Introduction
 
-This offers an [OCR-D](https://ocr-d.de) compliant [workspace processor](https://ocr-d.de/en/spec/cli) for [jdeskew](https://github.com/jdeskew/jdeskew).
+This offers an [OCR-D](https://ocr-d.de) compliant [workspace processor](https://ocr-d.de/en/spec/cli) for [jdeskew](https://github.com/phamquiluan/jdeskew).
 
 ## Installation
 
